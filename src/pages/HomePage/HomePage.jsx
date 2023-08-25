@@ -55,7 +55,7 @@ const HomePage = () => {
         </WrapperTypeProduct>
       </div>
       <div className='body' style={{ width: '100%', backgroundColor: '#efefef', }}>
-        <div id="container" style={{ height: '1000px', width: '1270px', margin: '0 auto' }}>
+        <div id="container" style={{ height: 'fit-content', width: '1270px', margin: '0 auto' }}>
           <SliderComponent arrImages={[slider1, slider2, slider3]} />
           <WrapperProducts>
             {products?.data?.map((product) => {
@@ -80,7 +80,7 @@ const HomePage = () => {
             <WrapperButtonMore
               textbutton={isPreviousData ? 'Load more' : "Xem thêm"} type="outline" styleButton={{
                 border: `1px solid ${products?.total === products?.data?.length ? '#f5f5f5' : '#9255FD'}`, color: `${products?.total === products?.data?.length ? '#f5f5f5' : '#9255FD'}`,
-                width: '240px', height: '38px', borderRadius: '4px'
+                width: '240px', height: '38px', borderRadius: '4px', marginBottom: "20px"
               }}
               disabled={products?.total === products?.data?.length || products?.totalPage === 1}
               styleTextButton={{ fontWeight: 500, color: products?.total === products?.data?.length && '#fff' }}

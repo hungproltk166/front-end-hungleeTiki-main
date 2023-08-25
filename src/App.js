@@ -39,12 +39,12 @@ function App() {
     const { decoded } = handleDecoded()
     let storageRefreshToken = localStorage.getItem('refresh_token')
     const refreshToken = JSON.parse(storageRefreshToken)
-    const decodedRefreshToken =  jwt_decode(refreshToken)
+    const decodedRefreshToken = jwt_decode(refreshToken)
     if (decoded?.exp < currentTime.getTime() / 1000) {
-      if(decodedRefreshToken?.exp > currentTime.getTime() / 1000) {
+      if (decodedRefreshToken?.exp > currentTime.getTime() / 1000) {
         const data = await UserService.refreshToken(refreshToken)
         config.headers['token'] = `Bearer ${data?.access_token}`
-      }else {
+      } else {
         dispatch(resetUser())
       }
     }
@@ -57,11 +57,11 @@ function App() {
     let storageRefreshToken = localStorage.getItem('refresh_token')
     const refreshToken = JSON.parse(storageRefreshToken)
     const res = await UserService.getDetailsUser(id, token)
-    dispatch(updateUser({ ...res?.data, access_token: token, refreshToken: refreshToken}))
+    dispatch(updateUser({ ...res?.data, access_token: token, refreshToken: refreshToken }))
   }
 
   return (
-    <div style={{height: '100vh', width: '100%'}}>
+    <div style={{ height: '100vh', width: '100%', }}>
       <Loading isLoading={isLoading}>
         <Router>
           <Routes>
