@@ -36,21 +36,29 @@ const FooterComponent = () => {
                 <Col xs={24} sm={12} md={8}>
                     <h2>Follow Us</h2>
                     <div>
-                        <InstagramOutlined
-                            style={socialIconsStyle}
-                            onMouseOver={onSocialIconHover}
-                            onMouseLeave={onSocialIconLeave}
-                        />
-                        <FacebookOutlined
-                            style={socialIconsStyle}
-                            onMouseOver={onSocialIconHover}
-                            onMouseLeave={onSocialIconLeave}
-                        />
-                        <TwitterOutlined
-                            style={socialIconsStyle}
-                            onMouseOver={onSocialIconHover}
-                            onMouseLeave={onSocialIconLeave}
-                        />
+                        <a href='https://www.instagram.com/lqh1811/'>
+                            <InstagramOutlined
+                                style={socialIconsStyle}
+                                onMouseOver={onSocialIconHover}
+                                onMouseLeave={onSocialIconLeave}
+                            />
+                        </a>
+
+                        <a href='https://www.facebook.com/toikhongphailahung/'>
+                            <FacebookOutlined
+                                style={socialIconsStyle}
+                                onMouseOver={onSocialIconHover}
+                                onMouseLeave={onSocialIconLeave}
+                            />
+                        </a>
+                        <a href='https://twitter.com/?lang=vi'>
+                            <TwitterOutlined
+                                style={socialIconsStyle}
+                                onMouseOver={onSocialIconHover}
+                                onMouseLeave={onSocialIconLeave}
+                            />
+                        </a>
+
                     </div>
                 </Col>
                 <Col xs={24} sm={24} md={8}>
